@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
-import ShowCards from "./ShowCards";
+import ShowCards from "./Components/ShowCards";
 function App() {
-  const [error, setError] = useState("");
   const [data, setData] = useState([]);
   const [textInput, setTextInput] = useState("");
 
@@ -11,9 +10,6 @@ function App() {
       .then((data) => {
         setData(data);
       })
-      .catch((e) => {
-        setError("fetch failed");
-      });
   }, [textInput]);
   return (
     <div className="view-container">
