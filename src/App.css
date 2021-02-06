@@ -3,7 +3,7 @@ body {
 }
 
 .card-container {
-  height: 30vw;
+  height: 35vw;
   width: 72vh;
   border: 10px solid white;
   border-radius: 5%;
@@ -85,9 +85,7 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  position: relative;
-  bottom: 10%;
-  left: 35%;
-  font-size: 35px;
+  font-size: 15px;
   align-items: center;
+  margin-bottom: 20vh;
 }

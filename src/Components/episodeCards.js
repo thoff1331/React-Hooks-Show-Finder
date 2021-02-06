@@ -10,10 +10,10 @@ function EpisodeCards(props) {
         setSeasonNumber(data);
       })
   }, [seasonNumber]);
-   console.log(seasonNumber)
    return (
        
        <div className='episode-container'>
+      <h6>Network: {props.network.name}</h6>   
      <h6>Number of Episodes: {props.numberOfEpisodes}</h6>
      <h5>Number of Seasons:{seasonNumber.length}</h5>
        </div>
