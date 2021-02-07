@@ -13,9 +13,9 @@ function EpisodeCards(props) {
    return (
        
        <div className='episode-container'>
-      <h6>Network: {props.network.name}</h6>   
-     <h6>Number of Episodes: {props.numberOfEpisodes}</h6>
-     <h5>Number of Seasons:{seasonNumber.length}</h5>
+      <h2>Network: {props.network.name}</h2>   
+      <h3>Number of Seasons: {seasonNumber.length}</h3>
+     <h2>Number of Episodes: {props.numberOfEpisodes}</h2>
        </div>
 )
 

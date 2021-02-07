@@ -21,7 +21,7 @@ function App() {
         />
         <button onClick={(e) => setTextInput(textInput)}>Search</button>
       </div>
-      {textInput === "" ? (
+      {textInput === "" || data.length === 0 ? (
         <h1 className="no-data">What Would You Like To Watch...?</h1>
       ) : (
         <ShowCards shows={data} />
