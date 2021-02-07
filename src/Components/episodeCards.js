@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import '../App.css'
 function EpisodeCards(props) {
-    let { showid }= props
+    let { showid } = props
  const [seasonNumber,setSeasonNumber] = useState('')
  useEffect(() => {
     fetch(`https://api.tvmaze.com/shows/${showid}/seasons`)
@@ -9,7 +9,7 @@ function EpisodeCards(props) {
       .then((data) => {
         setSeasonNumber(data);
       })
-  }, [seasonNumber]);
+  },);
    return (
        
        <div className='episode-container'>

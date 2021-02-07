@@ -3,7 +3,6 @@ import "../App.css";
 import EpisodeCards from "./episodeCards";
 function ShowCards(props) {
 const [showEpisodes,setshowEpisodes] = useState([])
-const [error, setError] = useState("");
 const [episodesMenu,setEpisodeMenu] = useState(false)
 const [showid,setShowId] = useState('')
 
@@ -13,9 +12,6 @@ useEffect(() => {
     .then((data) => {
       setshowEpisodes(data);
     })
-    .catch((error) => {
-      setError(error);
-    },[error]);
 }, [showEpisodes]);
 
   const card = props.shows.map((show, index) => {
