@@ -34,6 +34,7 @@ body {
   align-items: center;
   width: 40vw;
   justify-content: space-evenly;
+  margin-top: 2vh;
 }
 
 .show-search input {
@@ -47,14 +48,15 @@ body {
   border: none;
 }
 .show-search button {
-  height: 100px;
-  width: 100px;
+  height: 70px;
+  width: 70px;
   border-radius: 50%;
   justify-content: center;
   color: black;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 900;
   border: 4px solid black;
+  outline: none;
 }
 
 .cards-container {

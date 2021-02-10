@@ -15,11 +15,10 @@ function App() {
     <div className="view-container">
       <div className="show-search">
         <input
-          value={textInput}
           onChange={(e) => setTextInput(e.target.value)}
           placeholder="Search for a show"
         />
-        <button onClick={(e) => setTextInput(textInput)}>Search</button>
+       
       </div>
       {textInput === "" || data.length === 0 ? (
         <h1 className="no-data">What Would You Like To Watch...?</h1>

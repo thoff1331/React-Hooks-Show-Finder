@@ -14,6 +14,12 @@ useEffect(() => {
     })
 }, [showEpisodes]);
 
+const handleClick = (show) => {
+  setEpisodeMenu(episodesMenu => !episodesMenu);
+  setshowEpisodes(show.show.id)
+  setShowId(show.show.id)
+}
+
   const card = props.shows.map((show, index) => {
     return (
       <div className="card-container">
@@ -25,16 +31,12 @@ useEffect(() => {
         ) : (
           <h1>No Image To Display</h1>
         )}
-        <p>
-          {show.show.summary &&
-            show.show.summary
-              .replace("<p>", "")
-              .replace("</p>", "")
-              .replace("<b>", "")
-              .replace("</b>", "")}
+        <p> 
+          { show.show.summary && show.show.summary.replace(/(&nbsp;|<([^>]+)>)/ig, "" )}
+       
         </p>
         <>
-        <button onClick={() => {setshowEpisodes(show.show.id);setEpisodeMenu(episodesMenu => !episodesMenu); setShowId(show.show.id) }}>{episodesMenu ?'Close': 'More Info'}</button>
+        <button onClick={() => handleClick(show)}>{episodesMenu ?'Close': 'More Info'}</button>
        {episodesMenu && showid === show.show.id ? <EpisodeCards showid={showid} episodes={showEpisodes} numberOfEpisodes={showEpisodes.length} network={show.show.network} /> : null }
         </>
       </div>
